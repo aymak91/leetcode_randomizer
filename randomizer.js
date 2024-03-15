@@ -42,9 +42,10 @@ const problemList = [
 // 3 -> hard
 
 const filteredList = problemList.filter(problem => {
-    (problem["done?"] == false) 
-    && (problem['difficulty'] <= 3) 
-    && (problem['premium?']) == false
+    return (
+        (problem["done?"] == false) 
+        && (problem['difficulty'] <= 3) 
+        && (problem['premium?'] == false))
     })
 
 const random = Math.floor(Math.random()*filteredList.length)
